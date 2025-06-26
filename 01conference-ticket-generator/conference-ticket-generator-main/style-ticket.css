@@ -1,0 +1,43 @@
+.ticket-container {
+  background: linear-gradient(to right, #0f021f, #1b0434);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 40px;
+  text-align: center;
+}
+
+.ticket-card {
+  margin-top: 40px;
+  background: #1e0e3d;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.ticket-info {
+  text-align: left;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.ticket-number {
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  opacity: 0.5;
+}

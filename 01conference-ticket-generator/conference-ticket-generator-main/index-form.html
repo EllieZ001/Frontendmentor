@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference-Ticket-Generator</title>
+    <link rel="stylesheet" href="./style-form.css">
+</head>
+<body>
+    <main class="container"> 
+        <header class="logo-title">
+            <img src="./assets/images/logo-mark.svg" alt="Coding Conf Logo" class="logo" />
+            <span class="logo-text">Coding Conf</span>
+        </header>
+        <div class="title-text">
+            <h1>
+              Your Journey to Coding Conf<br>
+              2025 Starts Here!
+            </h1>
+            <h4>Secure your spot at next year's biggest coding conference.</h4>
+        </div>       
+
+        <section class="form-section"> 
+           <form class="ticket-form">
+                <label for="avatar" class="upload-label">Upload Avatar</label>
+
+                <div class="upload-box">
+                    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                    <p>Drag and drop or click to upload</p>
+                    <small>Upload your photo (JPG or PNG, max size: 500KB).</small>
+                </div>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required />
+
+                <label for="github">GitHub Username</label>
+                <input type="text" id="github" name="github" placeholder="@yourusername" />
+
+                <button type="button" class="btn-submit" onclick="goToTicket()">Generate My Ticket</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+         function goToTicket() {
+            const name = document.getElementById("fullname").value;
+            const email = document.getElementById("email").value;
+            const github = document.getElementById("github").value;
+             
+
+            if (!name) { 
+            alert("Please enter your name.");
+            return;
+            }
+
+            if (!email) {
+            alert("Please enter your email.");
+            return;
+            }
+
+            if (!github) {
+            alert("Please enter your github username.");
+            return;
+            }
+
+            // store data in localStorage
+            localStorage.setItem("ticket_name", name);
+            localStorage.setItem("ticket_email", email);
+            localStorage.setItem("ticket_github", github);
+
+            window.location.href = "ticket.html";
+        }
+                
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <link rel="stylesheet" href="./style-ticket.css">
+</head>
+<body>
+  <div class="ticket-container">
+    <header class="logo-title">
+      <img src="./assets/images/logo-mark.svg" alt="Coding Conf Logo" />
+       <span class="logo-text">Coding Conf</span>
+      <h1>Congrats, <span id="greeting">Ellie</span>!<br>Your ticket is ready.</h1>
+    </header>
+
+    <p>We've emailed your ticket to <br>
+      <span id="email">ellie@email.com</span> and will send updates in <br>
+      the run up to the event.</p>
+
+    <div class="ticket-card">
+      <div class="ticket-info">
+        <div class="ticket-title">
+          <img src="./assets/images/logo-mark.svg" />
+          <span>Coding Conf</span>
+        </div>
+        <p>June 25, 2025 / Canada, AB</p>
+        <div class="user-info">
+          <img id="avatar" src="./assets/images/image-avatar.jpg" />
+          <div>
+            <p id="name">Ellie</p>
+            <p id="github">@ellie0101</p>
+          </div>
+        </div>
+      </div>
+      <div class="ticket-number">#0609</div>
+    </div>
+  </div>
+
+    
+    <script>
+        // get data from localStorage
+        
+        const name = localStorage.getItem("ticket_name");
+        const email = localStorage.getItem("ticket_email");
+        const github = localStorage.getItem("ticket_github");
+        const avatar = localStorage.getItem("avatarData"); 
+        
+        // rendering the DOM
+        document.getElementById("greeting").textContent = name;
+        document.getElementById("email").textContent = email;
+        document.getElementById("name").textContent = name;
+        document.getElementById("github").textContent = "@" + github;
+
+        
+        if (avatar) {
+        document.getElementById("avatar").src = avatar;
+        }
+        
+    </script>
+</body>
+</html>

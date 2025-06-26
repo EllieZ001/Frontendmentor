@@ -1,0 +1,142 @@
+/* === 页面基础重置和通用设置 === */
+* {
+  margin: 0;                /* 清除默认外边距 */
+  padding: 0;               /* 清除默认内边距 */
+  box-sizing: border-box;   /* 边框盒模型，包含 padding 和 border */
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-image: url('./assets/images/background-desktop.png'); /* 👈 背景图片路径 */
+  background-size: cover;          /* 图片等比例填满整个背景 */
+  background-position: center;     /* 图片居中显示 */
+  background-repeat: no-repeat;    /* 不重复平铺 */
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 40px 20px;
+}
+
+/* === 页面主容器样式 === */
+.container {
+  max-width: 600px;         /* 最大宽度 */
+  width: 100%;              /* 宽度自适应 */
+  display: flex;
+  flex-direction: column;   /* 垂直排列 */
+  align-items: center;      /* 水平居中对齐内容 */
+  gap: 24px;                /* 每个子元素之间的间距 */
+}
+
+/* === Logo 与 "Coding Conf" 标题 === */
+.logo-title {
+  display: flex;
+  align-items: center;      /* 图标和文字垂直居中对齐 */
+  gap: 10px;                /* 图标与文字之间的间距 */
+}
+
+.logo {
+  width: 28px;              /* 图标宽度 */
+  height: 28px;             /* 图标高度 */
+}
+
+.logo-text {
+  font-size: 16px;          /* 字体大小 */
+  font-weight: 700;         /* 加粗 */
+  color: #ff867c;           /* 使用淡红色作为强调 */
+}
+
+/* === 大标题与副标题区域 === */
+.title-text {
+  text-align: center;       /* 居中显示 */
+}
+
+.title-text h1 {
+  font-size: 2.4rem;        /* 主标题字号 */
+  font-weight: 700;         /* 加粗 */
+  line-height: 1.3;         /* 行高，控制上下行间距 */
+  margin: 0;                /* 去掉默认外边距 */
+}
+
+.title-text h4 {
+  margin-top: 12px;         /* 与主标题之间的距离 */
+  font-size: 1rem;          /* 字体大小 */
+  font-weight: 500;         /* 稍微加粗 */
+  color: #ccc;              /* 灰色字体，提示语感 */
+}
+
+/* === 表单整体区域样式 === */
+.form-section {
+  width: 100%;              /* 让表单区域铺满容器宽度 */
+}
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;   /* 表单项垂直排列 */
+  gap: 16px;                /* 每一项之间的间距 */
+}
+
+/* === 上传头像区 === */
+.upload-label {
+  font-weight: 600;         /* 标签加粗 */
+  font-size: 0.95rem;
+}
+
+.upload-box {
+  border: 2px dashed #666;      /* 虚线边框 */
+  background-color: #1e1e2f;    /* 深色背景 */
+  border-radius: 12px;          /* 圆角边框 */
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
+}
+
+.upload-box input[type="file"] {
+  margin-bottom: 10px;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.upload-box p {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.upload-box small {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* === 输入框样式 === */
+input[type="text"],
+input[type="email"] {
+  padding: 12px;                  /* 内边距 */
+  background-color: #1e1e2f;      /* 输入框背景色 */
+  color: #fff;                    /* 字体颜色 */
+  border: none;
+  border-radius: 8px;             /* 圆角 */
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #aaa;                    /* 占位文字颜色 */
+}
+
+/* === 按钮样式 === */
+.btn-submit {
+  background-color: #ff6f61;      /* 按钮背景色 */
+  color: black;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #e95c50;      /* 悬停变色 */
+}
