@@ -1,3 +1,19 @@
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-image: url('./assets/images/background-desktop.png'); /* 👈 背景图片路径 */
+  background-size: cover;          /* 图片等比例填满整个背景 */
+  background-position: center;     /* 图片居中显示 */
+  background-repeat: no-repeat;    /* 不重复平铺 */
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 40px 20px;
+}
+
+
 .ticket-container {
   background: linear-gradient(to right, #0f021f, #1b0434);
   color: white;
